@@ -9,4 +9,12 @@ public class PlayerComponent : MonoBehaviour
     public float velocidade = 20;
 
     public bool jumpar = false;
+
+    void Update(){
+        moveDeitado = Input.GetAxisRaw("Horizontal") *  velocidade;
+
+        if(Input.GetButtonDown("Jump")){
+            jumpar = true;
+        }
+    }
 }
