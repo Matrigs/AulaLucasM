@@ -41,4 +41,15 @@ public class CharacterControler2d : MonoBehaviour
             }
         }
     }
+
+    public void Move(float directions, bool jump)
+    {
+        rizin.velocity = new Vector2(directions * veHo, rizin.velocity.y);
+        private float moVe = Input.GetAxis("Vertical");
+        if (jump == true&& nochao == true)
+        {
+            nochao = false;
+            rizin.AddForce(new Vector2(0f,alturaPulo));
+        }
+    }
 }
