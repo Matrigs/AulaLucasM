@@ -24,7 +24,7 @@ public class CharacterControler2d : MonoBehaviour
         chekachao = transform.Find("penochao");
         rizin = GetComponent <Rigidbody2D>();
     }
-
+   
     private void FixedUpdate(){
         //cria um circulo a partir do pé do player(chekachao), com um certo raio(chekaraio), detectando a camada do chão(graunmd)
         // um raio é a distancia entre o centro de um circulo e sua borda
@@ -41,11 +41,10 @@ public class CharacterControler2d : MonoBehaviour
             }
         }
     }
-
     public void Move(float directions, bool jump)
     {
         rizin.velocity = new Vector2(directions * veHo, rizin.velocity.y);
-        private float moVe = Input.GetAxis("Vertical");
+        float moVe = Input.GetAxis("Vertical");
         if (jump == true&& nochao == true)
         {
             nochao = false;

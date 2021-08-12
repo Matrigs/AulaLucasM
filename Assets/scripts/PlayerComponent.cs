@@ -22,7 +22,7 @@ public class PlayerComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        //characterControler.Move();
+        characterControler.Move(moveDeitado * Time.fixedDeltaTime, jumpar);
         jumpar = false;
-    }
+    } 
 }
